@@ -2,7 +2,7 @@
 
 ## 📕 Description
 
-This repo contains inputs, outputs, and step-by-step details regarding how models were reconstructed for strains used in Melanie's screen.
+This repo contains inputs, outputs, and step-by-step details regarding how models were reconstructed for strains used in Melanie's screen. For more details check out the [SymbNET metabolic modeling tutorial](https://github.com/franciscozorrilla/SymbNET)
 
 ## 🧱 Materials
 
