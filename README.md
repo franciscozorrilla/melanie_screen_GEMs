@@ -49,5 +49,5 @@ Gapfill on M3 media, output model with fbc2 format
 
 ```
 $ mkdir -p models/M3_gapfilled
-$ while read model;do carve -v --mediadb media/media_db.tsv -g M3 --fbc2 -o models/M3_gapfilled/${model%.*}.xml genomes/$model; done< <(ls genomes)
+$ while read model;do carve -v --mediadb media/media_db.tsv -g M3 --fbc2 -o models/M3_gapfilled/${model%.*}.xml proteomes/$model; done< <(ls genomes)
 ```
