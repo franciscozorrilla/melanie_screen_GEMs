@@ -12,12 +12,28 @@ This repo contains inputs, outputs, and step-by-step details regarding how model
 * `ensembles` Ensemble models for network uncertainty quantification
 * `models` Genome scale metabolic models gapfilled on various media
 
+## 🐪 Software used
+
+* git
+* Prodigal
+* CarveMe
+
 ## 🩺 Methods
 
-1. Translate genomes to ORF-annotated protein fasta files using prodigal
+### 0. Clone repo
 
 ```
-
+$ git clone https://github.com/franciscozorrilla/melanie_screen_GEMs.git
 ```
 
-2. Create genome scale metabolic models using CarveMe 
+### 1. Translate genomes to ORF-annotated protein fasta files using prodigal
+
+Move into cloned repository directory
+
+```
+$ cd melanie_screen_GEMs
+```
+
+Run prodigal 
+
+### 2. Create genome scale metabolic models using CarveMe 
