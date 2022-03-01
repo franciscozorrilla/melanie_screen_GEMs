@@ -47,9 +47,23 @@ $ while read file; do prodigal -i genomes/$file -a proteomes/${file%.*}.faa;done
 
 ### 2. Create genome scale metabolic models using CarveMe 
 
-Gapfill on M3 media, output model with fbc2 format
+Output models with fbc2 format gapfilling on M3 media
 
 ```
 $ mkdir -p models/M3_gapfilled
 $ while read model;do carve -v --mediadb media/media_db.tsv -g M3 --fbc2 -o models/M3_gapfilled/${model%.*}.xml proteomes/$model; done< <(ls proteomes)
 ```
+
+Output models with fbc2 format without gapfilling
+```
+$ mkdir -p models/no_gapfill
+$ while read model;do carve -v --fbc2 -o models/no_gapfill/${model%.*}.xml proteomes/$model; done< <(ls proteomes/)
+```
+
+### 3. Create ensemble models
+
+```
+
+```
+
+## 🏌️‍♂️ Results
