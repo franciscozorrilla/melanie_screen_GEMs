@@ -1,4 +1,4 @@
-# ⚗️ Melanie screen GEMs
+# ⚗️ Melanie's screen GEMs
 
 ## 📕 Description
 
