@@ -17,6 +17,8 @@ This repo contains inputs, outputs, and step-by-step details regarding how model
 * git
 * Prodigal
 * CarveMe
+   * diamond
+   * CPLEX
 
 ## 🩺 Methods
 
