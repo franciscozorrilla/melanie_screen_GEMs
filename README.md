@@ -57,6 +57,7 @@ $ while read model;do carve -v --mediadb media/media_db.tsv -g M3 --fbc2 -o mode
 ```
 
 Output models with fbc2 format without gapfilling
+
 ```
 $ mkdir -p models/no_gapfill
 $ while read model;do carve -v --fbc2 -o models/no_gapfill/${model%.*}.xml proteomes/$model; done< <(ls proteomes/)
@@ -64,8 +65,11 @@ $ while read model;do carve -v --fbc2 -o models/no_gapfill/${model%.*}.xml prote
 
 ### 3. Create ensemble models
 
-```
+Create ensembles with 100 versions of each strain
 
+```
+$ mkdir -p ensembles
+$ while read model; do carve -v --fbc2 -n 100 -o ensembles/${model%.*}.xml proteomes/$model;  done< <(ls proteomes)
 ```
 
 ## 🏌️‍♂️ Results
