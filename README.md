@@ -22,13 +22,13 @@ This repo contains inputs, outputs, and step-by-step details regarding how model
 
 ## 🩺 Methods
 
-#### 0. Clone repo
+### 0. Clone repo
 
 ```
 $ git clone https://github.com/franciscozorrilla/melanie_screen_GEMs.git
 ```
 
-#### 1. Translate genomes to ORF-annotated protein fasta files using prodigal
+### 1. Translate genomes to ORF-annotated protein fasta files using prodigal
 
 Move into cloned repository directory and create `proteomes` folder
 
@@ -43,7 +43,7 @@ Run prodigal on each input genome file found in the `genomes/` folder
 $ while read file; do prodigal -i genomes/$file -a proteomes/${file%.*}.faa;done< <(ls genomes/)
 ```
 
-#### 2. Create genome scale metabolic models using CarveMe 
+### 2. Create genome scale metabolic models using CarveMe 
 
 Gapfill on M3 media, output model with fbc2 format
 
