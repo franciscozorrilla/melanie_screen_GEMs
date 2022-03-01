@@ -43,7 +43,7 @@ Run prodigal on each input genome file found in the `genomes/` folder
 $ while read file; do prodigal -i genomes/$file -a proteomes/${file%.*}.faa;done< <(ls genomes/)
 ```
 
-#### 2 Create genome scale metabolic models using CarveMe 
+#### 2. Create genome scale metabolic models using CarveMe 
 
 Gapfill on M3 media, output model with fbc2 format
 
