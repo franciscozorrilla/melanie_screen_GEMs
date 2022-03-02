@@ -74,6 +74,10 @@ $ while read model; do carve -v --fbc2 -n 100 -o ensembles/${model%.*}.xml prote
 
 ## 🏌️‍♂️ Results
 
-### Genes, reactions, and metabolites
+### 1. Genes, reactions, and metabolites
 
 ![](https://github.com/franciscozorrilla/melanie_screen_GEMs/blob/main/plots/model_summary.png?raw=true)
+
+### 2. Ensemble model jaccard distance
+
+![](https://github.com/franciscozorrilla/melanie_screen_GEMs/blob/main/plots/ensemble_dist.png?raw=true)
