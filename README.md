@@ -96,6 +96,7 @@ In R:
 
 ```
 library(tidyverse)
+library(vegan)
 
 # Load list of EC numbers extracted from models
 
@@ -106,5 +107,9 @@ ecnum=read.delim("melanie_screen_GEMs/M3_ec_models.tsv")
 ecnum %>% mutate(presence=1) %>% 
           pivot_wider(names_from = ec_number,values_from = presence,values_fill = 0) %>% 
           column_to_rownames(.,var="model") -> ec_mat
+
+
+vegdist(ec_mat, method="jaccard", binary=TRUE) -> D
+as.matrix(D) -> D
 
 ```
