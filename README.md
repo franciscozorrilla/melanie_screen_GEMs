@@ -81,3 +81,13 @@ $ while read model; do carve -v --fbc2 -n 100 -o ensembles/${model%.*}.xml prote
 ### 2. Ensemble model jaccard distance
 
 ![](https://github.com/franciscozorrilla/melanie_screen_GEMs/blob/main/plots/ensemble_dist.png?raw=true)
+
+### 3. Extract EC number information from model sets
+
+The following loop was run from within the folder containing M3-gapfilled models to generate a list of EC numbers across models:
+
+```
+while read model;do 
+  paste $model|grep "EC Number"|sed 's/^.*: //g'|sed 's/<.*$//g'|sort|uniq|sed "s/^/${model%.*}\t/g";
+done< <(ls|grep xml) > M3_ec_models.tsv
+```
