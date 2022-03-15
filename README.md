@@ -91,3 +91,20 @@ while read model;do
   paste $model|grep "EC Number"|sed 's/^.*: //g'|sed 's/<.*$//g'|sort|uniq|sed "s/^/${model%.*}\t/g";
 done< <(ls|grep xml) > M3_ec_models.tsv
 ```
+
+In R:
+
+```
+library(tidyverse)
+
+# Load list of EC numbers extracted from models
+
+ecnum=read.delim("melanie_screen_GEMs/M3_ec_models.tsv")
+
+# Create presence/absence matrix
+
+ecnum %>% mutate(presence=1) %>% 
+          pivot_wider(names_from = ec_number,values_from = presence,values_fill = 0) %>% 
+          column_to_rownames(.,var="model") -> ec_mat
+
+```
