@@ -118,4 +118,4 @@ ggplot(jaccard_list) + geom_tile(aes(x=rowname,y=model,fill=jaccard)) + theme(ax
 
 ```
 
-![](https://github.com/franciscozorrilla/melanie_screen_GEMs/blob/main/plots/jaccard_dist.pdf?raw=true)
+![](https://github.com/franciscozorrilla/melanie_screen_GEMs/blob/main/plots/jaccard_dist.png?raw=true)
