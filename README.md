@@ -112,4 +112,10 @@ ecnum %>% mutate(presence=1) %>%
 vegdist(ec_mat, method="jaccard", binary=TRUE) -> D
 as.matrix(D) -> D
 
+as.data.frame(D) %>% rownames_to_column() %>% pivot_longer(cols=NT5001:YK0002,names_to = "model",values_to = "jaccard") -> jaccard_list
+
+ggplot(jaccard_list) + geom_tile(aes(x=rowname,y=model,fill=jaccard)) + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 ```
+
+![](https://github.com/franciscozorrilla/melanie_screen_GEMs/blob/main/plots/jaccard_dist.pdf?raw=true)
