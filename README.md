@@ -8,6 +8,7 @@ This repo contains inputs, outputs, and step-by-step details regarding how model
 
 * `genomes` DNA fasta files for 40 NCBI strains used in experimental screen
 * `models` Genome scale metabolic models gapfilled on various media
+* `ec_jaccard` EC-number-based Jaccard distance analysis files
 * `media` Growth media formulations used for gapfilling and simulation
 * `proteomes` Open reading frame (ORF)-annotated protein fasta files
 * `ensembles` Ensemble models for network uncertainty quantification
