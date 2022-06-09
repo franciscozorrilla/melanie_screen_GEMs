@@ -85,12 +85,20 @@ $ while read model; do carve -v --fbc2 -n 100 -o ensembles/${model%.*}.xml prote
 
 ### 3. Extract EC number information from model sets
 
-The following loop was run from within the folder containing M3-gapfilled models to generate a list of EC numbers across models:
+The following loop was run on the command line, from within the folder containing M3-gapfilled models to generate a list of EC numbers across models:
 
 ```
 while read model;do 
   paste $model|grep "EC Number"|sed 's/^.*: //g'|sed 's/<.*$//g'|sort|uniq|sed "s/^/${model%.*}\t/g";
-done< <(ls|grep xml) > M3_ec_models.tsv
+done< <(ls|grep xml) >> M3_ec_models.tsv
+```
+
+Alternatively extract reaction IDs:
+
+```
+while read model;do    
+  paste $model|grep "reaction metaid"|sed 's/^.*reaction metaid="//g'|sed 's/".*$//g'|sort|uniq|sed "s/^/${model%.*}\t/g"; 
+done< <(ls|grep xml) >> model_rxns.tsv
 ```
 
 In R:
